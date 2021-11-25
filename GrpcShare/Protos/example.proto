@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "gRpcTest";
+
+import "google/protobuf/empty.proto";
+
+service Example{
+	rpc GetMachineInfo (google.protobuf.Empty) returns (ExampleReply);
+}
+
+message ExampleReply{
+	string MachineName = 1;
+	string UserName = 2;
+}
